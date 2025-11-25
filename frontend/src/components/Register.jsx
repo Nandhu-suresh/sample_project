@@ -5,7 +5,7 @@ export default function Register() {
   const [msg, setMsg] = useState("");
 
   const handleSubmit = async () => {
-    const res = await fetch("http://localhost:5000/api/users/register", {
+    const res = await fetch("http://localhost:5000/ann/user/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

@@ -17,6 +17,7 @@ export default function Login({ onLogin }) {
 
     if (data.success) {
       onLogin(data.user);
+      setMsg(data.message);
     }
   };
 

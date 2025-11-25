@@ -1,20 +1,20 @@
-const User = require("../models/User");
+const nandhu = require("../models/User");
 
 // Register
 exports.registerUser = async(req, res) => {
   const { name, email, password } = req.body;
 
-  const user = new User({ name, email, password });
-  await user.save();
+  const nandhu = new nandhu({ name, email, password });
+  await nandhu.save();
 
-  res.json({ message: "User Registered", user });
+  res.json({ message: "User Registered", nandhu });
 };
 
 // Login
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
 
-  const user = await User.findOne({ email });
+  const user = await nandhu.findOne({ email });
 
   if (!user) return res.json({ success: false, message: "User not found" });
   if (user.password !== password)
@@ -25,12 +25,12 @@ exports.loginUser = async (req, res) => {
 
 // Get all
 exports.getUsers = async (req, res) => {
-  const users = await User.find();
+  const users = await nandhu.find();
   res.json(users);
 };
 
 // Delete
 exports.deleteUser = async (req, res) => {
-  await User.findByIdAndDelete(req.params.id);
+  await nandhu.findByIdAndDelete(req.params.id);
   res.json({ message: "User Deleted" });
 };
