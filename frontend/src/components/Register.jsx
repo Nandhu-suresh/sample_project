@@ -32,6 +32,10 @@ export default function Register() {
         type="password"
         onChange={(e) => setForm({ ...form, password: e.target.value })}
       />
+      <input
+        placeholder="Mobile"
+        onChange={(e) => setForm({ ...form, Mobile: e.target.value })}
+      />
 
       <button onClick={handleSubmit}>Register</button>
 

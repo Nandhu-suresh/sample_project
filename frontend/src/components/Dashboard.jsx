@@ -9,6 +9,9 @@ export default function Dashboard({ user, logout }) {
         <h3>Welcome, {user.name}! 👋</h3>
         <p>You are successfully logged in.</p>
       </div>
+      <div>
+        <button></button>
+      </div>
 
       <button onClick={logout}>Logout</button>
     </div>
