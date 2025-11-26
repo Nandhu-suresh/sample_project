@@ -10,6 +10,6 @@ const {
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/", getUsers);
-router.delete("/:id", deleteUser);
+// router.delete("/:id", deleteUser);
 
 module.exports = router;
